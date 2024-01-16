@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@page import="jstl_study.CarVO" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<%
+		CarVO car1=new CarVO("1234","소나타",2000);
+		request.setAttribute("car1",car1);
+	%>
+	
+	<!-- car1 객체 출력 -->
+	${car1.num }<br>
+	${requestScope.car1.name }<br>
+	${car1.price }
+
+</body>
+</html>
